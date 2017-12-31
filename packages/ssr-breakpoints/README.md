@@ -1,6 +1,6 @@
 # @biodiversity-nuxtjs/ssr-breakpoints
-[![npm (scoped with tag)](https://img.shields.io/npm/v/@biodiversity-nuxtjs/ssr-breakpoints/latest.svg?style=flat-square)](https://npmjs.com/package/@biodiversity-nuxtjs/ssr-breakpoints)
-[![npm](https://img.shields.io/npm/dt/@biodiversity-nuxtjs/ssr-breakpoints.svg?style=flat-square)](https://npmjs.com/package/@biodiversity-nuxtjs/ssr-breakpoints)
+[![npm (scoped with tag)](https://img.shields.io/npm/v/@biodiversity/ssr-breakpoints/latest.svg?style=flat-square)](https://npmjs.com/package/@biodiversity-nuxtjs/ssr-breakpoints)
+[![npm](https://img.shields.io/npm/dt/@biodiversity/ssr-breakpoints.svg?style=flat-square)](https://npmjs.com/package/@biodiversity-nuxtjs/ssr-breakpoints)
 [![CircleCI](https://img.shields.io/circleci/project/github/https://github.com/scbd/biodiversity-nuxtjs.git.svg?style=flat-square)](https://circleci.com/gh/https://github.com/scbd/biodiversity-nuxtjs.git)
 [![Codecov](https://img.shields.io/codecov/c/github/https://github.com/scbd/biodiversity-nuxtjs.git.svg?style=flat-square)](https://codecov.io/gh/https://github.com/scbd/biodiversity-nuxtjs.git)
 [![Dependencies](https://david-dm.org/https://github.com/scbd/biodiversity-nuxtjs.git/status.svg?style=flat-square)](https://david-dm.org/https://github.com/scbd/biodiversity-nuxtjs?path=packages/ssr-breakpoints)
