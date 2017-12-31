@@ -12,27 +12,63 @@
 
 ## Features
 
-The module features
+1. get bulma breakpoints in js from server or client
+
 
 ## Setup
-- Add `@biodiversity-nuxtjs/ssr-breakpoints` dependency using yarn or npm to your project
-- Add `@biodiversity-nuxtjs/ssr-breakpoints` to `modules` section of `nuxt.config.js`
+- Add `@biodiversity/ssr-breakpoints` dependency using yarn or npm to your project
+```bash
+  yarn add @biodiversity/ssr-breakpoints
+```
+```bash
+  npm install @biodiversity/ssr-breakpoints
+```
+
+- Add `@biodiversity/ssr-breakpoints` to `modules` section of `nuxt.config.js`
 
 ```js
 {
   modules: [
     // Simple usage
-    '@biodiversity-nuxtjs/ssr-breakpoints',
+    '@biodiversity/ssr-breakpoints',
 
     // With options
-    ['@biodiversity-nuxtjs/ssr-breakpoints', { /* module options */ }],
+    ['@biodiversity/ssr-breakpoints', { /* module options none yet*/ }],
  ]
 }
 ```
 
 ## Usage
 
-Module Description
+```html
+<template>
+	<section>
+        <div v-if="$breakpoints.isDesktopHD">
+          Desktop High Definition > 1408px
+        </div>
+
+        <div v-if="$breakpoints.isDesktopWS">
+          Desktop Wide Screen 1216px from to 1407px
+        </div>
+
+        <div v-if="$breakpoints.isDesktop">
+        	Desktop 1024px and until 1215px
+        </div>
+
+        <div v-if="$breakpoints.isTouch">
+          Touch < 1024px
+        </div>
+
+        <div v-if="$breakpoint.isTablet">
+        	Tablet 769px from to  1023px
+        </div>
+
+        <div v-if="$breakpoint.isMobile">
+        	Mobile < 768px
+        </div>
+	</section>
+</template>
+```
 
 ## License
 
