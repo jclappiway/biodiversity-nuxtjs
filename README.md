@@ -2,7 +2,8 @@
   <br>
     <img src="https://www.cbd.int/app/images/cbd-logo-green-en.svg" width="400px"/>
   <br>
-<img src="http://imgur.com/V4LtoII.png" width="50px"/> [Nuxt.js](https://github.com/nuxt/nuxt.js) Modules
+<img src="http://imgur.com/V4LtoII.png" width="50px"/> <br>
+<a href="https://github.com/nuxt/nuxt.js">Nuxt.js</a> Modules
 </p>
 
 
@@ -19,4 +20,5 @@
 
 | Repo Name        | Description               |
 | ---------------- | ------------------ |
-| [global-cbd-bar](https://github.com/scbd/biodiversity-nuxtjs/tree/master/packages/ssr-breakpoints)    | Fixed 50px bar at the top of a page.  Fades on scroll down and reappears on scroll up.  Contains CBD branding, app localization, me accounts links and scbd notifications.        |
+| [global-cbd-bar](https://github.com/scbd/biodiversity-nuxtjs/tree/master/packages/ssr-breakpoints)    | Fixed 50px bar at the top of a page.  
+Fades on scroll down and reappears on scroll up.  Contains CBD branding, app localization, me accounts links and scbd notifications.        |
