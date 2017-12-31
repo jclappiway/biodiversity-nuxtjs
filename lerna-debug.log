@@ -1,0 +1,102 @@
+0 silly input [ 'publish' ]
+1 silly flags { _: [ 'publish' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   'conventional-commits': true,
+1 silly flags   conventionalCommits: true,
+1 silly flags   p: true }
+2 verbose rootPath /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs
+3 info version 2.5.1
+4 info versioning independent
+5 silly isInitialized
+6 silly isInitialized true
+7 silly existsSync /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/VERSION
+8 silly initialize attempt
+9 silly isDetachedHead
+10 silly getCurrentBranch
+11 verbose getCurrentBranch master
+12 verbose isDetachedHead false
+13 silly getCurrentBranch
+14 verbose getCurrentBranch master
+15 silly getUpdates
+16 info Checking for updated packages...
+17 silly hasTags
+18 verbose hasTags false
+19 info Comparing with initial commit.
+20 verbose updated @biodiversity-nuxtjs/ssr-breakpoints
+21 info Checking for prereleased packages...
+22 silly collectDependents
+23 silly isPackageDependentOf @biodiversity-nuxtjs/ssr-breakpoints @biodiversity-nuxtjs/ssr-breakpoints
+24 silly collectUpdates
+25 verbose has filtered update @biodiversity-nuxtjs/ssr-breakpoints
+26 silly recommendIndependentVersion for @biodiversity-nuxtjs/ssr-breakpoints at /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints
+27 verbose recommendIndependentVersion increment 0.0.0 by patch
+28 silly initialize success
+29 silly execute attempt
+30 silly runScriptSync preversion @biodiversity-nuxtjs/ssr-breakpoints
+31 silly runScriptSync version @biodiversity-nuxtjs/ssr-breakpoints
+32 silly updateIndependentChangelog for @biodiversity-nuxtjs/ssr-breakpoints at /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints
+33 silly existsSync /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints/CHANGELOG.md
+34 silly updateIndependentChangelog writing new entry: "<a name=\"0.0.1\"></a>\n## 0.0.1 (2017-12-31)\n\n\n\n\n**Note:** Version bump only for package @biodiversity-nuxtjs/ssr-breakpoints"
+35 silly writeFileSync [ '/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints/CHANGELOG.md',
+35 silly writeFileSync   '# Change Log\n\nAll notable changes to this project will be documented in this file.\nSee [Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n<a name="0.0.1"></a>\n## 0.0.1 (2017-12-31)\n\n\n\n\n**Note:** Version bump only for package @biodiversity-nuxtjs/ssr-breakpoints' ]
+36 verbose updateIndependentChangelog wrote /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints/CHANGELOG.md
+37 silly addFile /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints/CHANGELOG.md
+38 silly addFile /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints/package.json
+39 silly commit Publish
+39 silly commit
+39 silly commit  - @biodiversity-nuxtjs/ssr-breakpoints@0.0.1
+40 verbose commit [ 'commit',
+40 verbose commit   '--no-gpg-sign',
+40 verbose commit   '-F',
+40 verbose commit   '/private/var/folders/wq/51cd818x23l9b3jpwhnws9z00000gn/T/825064a1-885d-4090-a644-2982861de732/lerna-commit.txt' ]
+41 silly addTag @biodiversity-nuxtjs/ssr-breakpoints@0.0.1
+42 silly runScriptSync postversion @biodiversity-nuxtjs/ssr-breakpoints
+43 info publish Publishing packages to npm...
+44 silly existsSync /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints/scripts/prepublish.js
+45 verbose execScript No prepublish script found at /Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints/scripts/prepublish.js
+46 verbose publishing @biodiversity-nuxtjs/ssr-breakpoints
+47 silly publishTaggedInDir latest ssr-breakpoints
+48 silly getExecOpts { cwd: '/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints' }
+49 error publish Retrying failed publish: @biodiversity-nuxtjs/ssr-breakpoints
+50 verbose publish error undefined
+51 verbose publishing @biodiversity-nuxtjs/ssr-breakpoints
+52 silly publishTaggedInDir latest ssr-breakpoints
+53 silly getExecOpts { cwd: '/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints' }
+54 error publish Retrying failed publish: @biodiversity-nuxtjs/ssr-breakpoints
+55 verbose publish error undefined
+56 verbose publishing @biodiversity-nuxtjs/ssr-breakpoints
+57 silly publishTaggedInDir latest ssr-breakpoints
+58 silly getExecOpts { cwd: '/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints' }
+59 error publish Retrying failed publish: @biodiversity-nuxtjs/ssr-breakpoints
+60 verbose publish error undefined
+61 verbose publishing @biodiversity-nuxtjs/ssr-breakpoints
+62 silly publishTaggedInDir latest ssr-breakpoints
+63 silly getExecOpts { cwd: '/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints' }
+64 error publish Retrying failed publish: @biodiversity-nuxtjs/ssr-breakpoints
+65 verbose publish error undefined
+66 verbose publishing @biodiversity-nuxtjs/ssr-breakpoints
+67 silly publishTaggedInDir latest ssr-breakpoints
+68 silly getExecOpts { cwd: '/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/packages/ssr-breakpoints' }
+69 error publish Ran out of retries while publishing @biodiversity-nuxtjs/ssr-breakpoints Error: Command failed: npm publish --tag latest
+69 error publish npm ERR! code ENEEDAUTH
+69 error publish npm ERR! need auth auth required for publishing
+69 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
+69 error publish
+69 error publish npm ERR! A complete log of this run can be found in:
+69 error publish npm ERR!     /Users/randyhoulahan/.npm/_logs/2017-12-31T20_06_11_169Z-debug.log
+69 error publish
+69 error publish     at Promise.all.then.arr (/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/node_modules/lerna/node_modules/execa/index.js:236:11)
+69 error publish     at <anonymous>
+69 error publish     at process._tickCallback (internal/process/next_tick.js:188:7)
+70 error execute callback with error
+71 error Error: Command failed: npm publish --tag latest
+71 error npm ERR! code ENEEDAUTH
+71 error npm ERR! need auth auth required for publishing
+71 error npm ERR! need auth You need to authorize this machine using `npm adduser`
+71 error
+71 error npm ERR! A complete log of this run can be found in:
+71 error npm ERR!     /Users/randyhoulahan/.npm/_logs/2017-12-31T20_06_11_169Z-debug.log
+71 error
+71 error     at Promise.all.then.arr (/Users/randyhoulahan/Documents/projects/biodiversity-nuxtjs/node_modules/lerna/node_modules/execa/index.js:236:11)
+71 error     at <anonymous>

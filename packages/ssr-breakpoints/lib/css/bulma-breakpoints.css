@@ -1,0 +1,40 @@
+body:before {
+  content: "isMobile";
+  display: none; /* Prevent from displaying. */
+}
+
+@media screen and (max-width: 768px) {
+  body:before {
+    content: "isMobile";
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  body:before {
+    content: "isTablet";
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  body:before {
+    content: "isTouch";
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1215px) {
+  body:before {
+    content: "isDesktop";
+  }
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  body:before {
+    content: "isDesktopWideScreen";
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  body:before {
+    content: "isDesktopFullHD";
+  }
+}
