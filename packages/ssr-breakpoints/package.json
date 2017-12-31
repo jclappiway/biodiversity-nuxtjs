@@ -1,6 +1,6 @@
 {
   "name": "@biodiversity-nuxtjs/ssr-breakpoints",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Detect device and infer screen resolution on server or device and screen resolution breaks on client",
   "license": "MIT",
   "contributors": [
@@ -32,9 +32,6 @@
       "lib",
       "test"
     ]
-  },
-  "dependencies": {
-
   },
   "devDependencies": {
     "nuxt-module-builder": "latest"
