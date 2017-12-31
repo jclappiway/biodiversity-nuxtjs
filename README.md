@@ -20,5 +20,4 @@
 
 | Repo Name        | Description               |
 | ---------------- | ------------------ |
-| [global-cbd-bar](https://github.com/scbd/biodiversity-nuxtjs/tree/master/packages/ssr-breakpoints)    | Fixed 50px bar at the top of a page.  
-Fades on scroll down and reappears on scroll up.  Contains CBD branding, app localization, me accounts links and scbd notifications.        |
+| [global-cbd-bar](https://github.com/scbd/biodiversity-nuxtjs/tree/master/packages/ssr-breakpoints)    | Fixed 50px bar at the top of a page.  Fades on scroll down and reappears on scroll up.  Contains CBD branding, app localization, me accounts links and scbd notifications.        |
