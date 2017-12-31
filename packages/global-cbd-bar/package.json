@@ -1,0 +1,42 @@
+{
+  "name": "@biodiversity/global-cbd-bar",
+  "version": "0.0.0",
+  "description": "Fixed 50px bar at the top of a page.  Fades on scroll down and reappears on scroll up.  Contains CBD branding, app localization, me accounts links and scbd notifications. ",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Convention on Biological Diversity <it@cbd.int>"
+    }
+  ],
+  "main": "lib/module.js",
+  "repository": "https://github.com/https://github.com/https://github.com/scbd/biodiversity-nuxtjs.git",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint lib test",
+    "test": "npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish"
+  },
+  "eslintIgnore": [
+    "lib/templates/*.*"
+  ],
+  "files": [
+    "lib"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib",
+      "test"
+    ]
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "nuxt-module-builder": "latest"
+  }
+}

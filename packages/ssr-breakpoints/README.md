@@ -6,7 +6,9 @@
 [![dependencies Status](https://david-dm.org/scbd/biodiversity-nuxtjs/status.svg?path=packages/ssr-breakpoints)](https://david-dm.org/scbd/biodiversity-nuxtjs?path=packages/ssr-breakpoints)
 [![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
 
-> Detect device and infer screen resolution on server or device and screen resolution breaks on client
+<img src="http://imgur.com/V4LtoII.png" width="50px"/> [Nuxt.js](https://github.com/nuxt/nuxt.js)
+
+> Detect device and infer screen resolution on server or device and screen resolution breaks on client.  
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
@@ -69,6 +71,9 @@
 	</section>
 </template>
 ```
+
+## Contribute
+Submit a PR to the SCBD in https://github.com/scbd/biodiversity-nuxtjs/
 
 ## License
 
