@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "lerna": "lerna",
+    "bootstrap": "lerna bootstrap",
+    "lint": "eslint --ext .js packages",
+    "release": "lerna publish -p --conventional-commits",
+    "force-release": "for p in packages/*; do cd $p ; npm publish ; cd ../.. ; done"
+  },
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.12.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "lerna": "^2.5.1"
+  }
+}
