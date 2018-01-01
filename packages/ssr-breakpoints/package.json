@@ -14,8 +14,6 @@
     "access": "public"
   },
   "scripts": {
-    "build": "nuxt-module",
-    "watch": "nuxt-module --watch",
     "lint": "eslint lib src test",
     "lint-fix": "eslint --fix lib src test",
     "test": "NODE_ENV=test yarn run build && yarn run lint && jest",
