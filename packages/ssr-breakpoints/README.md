@@ -75,6 +75,11 @@
 ## Contribute
 Submit a PR to the SCBD in https://github.com/scbd/biodiversity-nuxtjs/
 
+## TODO
+1. desktop only
+2. separate cookie logic that works on server and client into separate module
+3. refactor repetitive code into one function
+
 ## License
 
 [MIT License](./LICENSE)

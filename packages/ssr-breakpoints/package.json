@@ -8,21 +8,27 @@
       "name": "Convention on Biological Diversity <it@cbd.int>"
     }
   ],
-  "main": "lib/module.js",
-  "repository": "https://github.com/https://github.com/scbd/biodiversity-nuxtjs.git",
+  "main": "module.js",
+  "repository": "https://github.com/scbd/biodiversity-nuxtjs/ssr-breakpoints",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "lint": "eslint lib test",
-    "test": "npm run lint && jest",
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "build": "nuxt-module",
+    "watch": "nuxt-module --watch",
+    "lint": "eslint lib src test",
+    "lint-fix": "eslint --fix lib src test",
+    "test": "NODE_ENV=test yarn run build && yarn run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "prepare": "yarn run test && yarn run build"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
   ],
   "files": [
-    "lib"
+    "lib",
+    "src",
+    "dist"
   ],
   "jest": {
     "testEnvironment": "node",

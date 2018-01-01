@@ -8,7 +8,7 @@
 
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
-
+[![codebeat badge](https://codebeat.co/badges/dac3ea59-d41e-4502-8e46-86b7db818d1d)](https://codebeat.co/projects/github-com-scbd-biodiversity-nuxtjs-master)
 ### Functional Modules:
 
 
