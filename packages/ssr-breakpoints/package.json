@@ -1,6 +1,6 @@
 {
   "name": "@biodiversity/ssr-breakpoints",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Detect device and infer screen resolution on server or device and screen resolution breaks on client",
   "license": "MIT",
   "contributors": [
@@ -16,27 +16,13 @@
   "scripts": {
     "lint": "eslint lib src test",
     "lint-fix": "eslint --fix lib src test",
-    "test": "NODE_ENV=test yarn run build && yarn run lint && jest",
-    "release": "standard-version && git push --follow-tags && npm publish",
-    "prepare": "yarn run test && yarn run build"
+    "release": "standard-version && git push --follow-tags"
   },
-  "eslintIgnore": [
-    "lib/templates/*.*"
-  ],
   "files": [
-    "lib",
-    "src",
-    "dist"
+    "module.js",
+    "plugin.js",
+    "style.css"
   ],
-  "jest": {
-    "testEnvironment": "node",
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "lib",
-      "test"
-    ]
-  },
   "devDependencies": {
     "nuxt-module-builder": "latest"
   }
