@@ -1,6 +1,6 @@
 {
   "name": "@biodiversity/global-cbd-bar",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Fixed 50px bar at the top of a page.  Fades on scroll down and reappears on scroll up.  Contains CBD branding, app localization, me accounts links and scbd notifications. ",
   "license": "MIT",
   "contributors": [
@@ -32,9 +32,6 @@
       "lib",
       "test"
     ]
-  },
-  "dependencies": {
-
   },
   "devDependencies": {
     "nuxt-module-builder": "latest"
