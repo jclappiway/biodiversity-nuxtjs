@@ -1,6 +1,6 @@
 {
   "name": "@biodiversity/ssr-breakpoints",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Detect device and infer screen resolution on server or device and screen resolution breaks on client",
   "license": "MIT",
   "contributors": [
@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "eslint lib src test",
     "lint-fix": "eslint --fix lib src test",
-    "release": "yarn version && git push --follow-tags && yarn release"
+    "release": "yarn version && git push --follow-tags && yarn publish"
   },
   "files": [
     "module.js",
