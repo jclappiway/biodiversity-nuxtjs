@@ -45,27 +45,27 @@
 ```html
 <template>
 	<section>
-        <div v-if="$breakpoints.isDesktopHD()">
+        <div v-if="$breakpoints.isDesktopHD">
           Desktop High Definition > 1408px
         </div>
 
-        <div v-if="$breakpoints.isDesktopWS()">
+        <div v-if="$breakpoints.isDesktopWS">
           Desktop Wide Screen 1216px from to 1407px
         </div>
 
-        <div v-if="$breakpoints.isDesktop()">
+        <div v-if="$breakpoints.isDesktop">
         	Desktop 1024px and until 1215px
         </div>
 
-        <div v-if="$breakpoints.isTouch()">
+        <div v-if="$breakpoints.isTouch">
           Touch < 1024px
         </div>
 
-        <div v-if="$breakpoint.isTablet()">
+        <div v-if="$breakpoint.isTablet">
         	Tablet 769px from to  1023px
         </div>
 
-        <div v-if="$breakpoint.isMobile()">
+        <div v-if="$breakpoint.isMobile">
         	Mobile < 768px
         </div>
 	</section>
@@ -76,9 +76,8 @@
 Submit a PR to the SCBD in https://github.com/scbd/biodiversity-nuxtjs/
 
 ## TODO
-1. desktop only
-2. separate cookie logic that works on server and client into separate module
-3. refactor repetitive code into one function
+1. separate cookie logic that works on server and client into separate module
+
 
 ## License
 

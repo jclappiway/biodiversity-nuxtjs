@@ -1,3 +1,4 @@
+import Vue from 'vue'
 // Regex from https://github.com/dotneet/nuxt-device-detect
 // eslint-disable-next-line
 const REGEX_MOBILE1 = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i
@@ -15,22 +16,41 @@ export default async function ({req, store, isServer, isClient, app}, inject) {
   let cookieBreakpoint = getCookieItem('breakpoint', req);
   let cssBreakpoint = ''
 
-  //in order to use in components this.$breakpoint.isMobile()
-  inject('breakpoints', {
-    isMobile: isMobile,
-    isTablet: isTablet,
-    isTouch: isTouch,
-    isDesktop: isDesktop,
-    isDesktopWS: isDesktopWideScreen,
-    isDesktopHD: isDesktopHighDefinition
-  })
+  let $breakpoints = {}
+  $breakpoints.isMobile = isMobile()
+  $breakpoints.isTablet = isTablet()
+  $breakpoints.isTouch = isTouch()
+  $breakpoints.isDesktop = isDesktop()
+  $breakpoints.isGteDesktop = !isTouch()
+  $breakpoints.isDesktopWS = isDesktopWideScreen()
+  $breakpoints.isDesktopHD = isDesktopHighDefinition()
 
-  // keep track of client's break point
-  app.router.afterEach(function (to, from) {
-    if(!cssBreakpoint && isClient) getCSSBreakpoint()
-    if(cssBreakpoint) setCookieItem('breakpoint',cssBreakpoint,Infinity,'/')
-  })
+  // keeps object reactive in in global space accessible in components
+  createStore (store)
 
+  if(isClient)
+    window.addEventListener('resize',onResize)
+
+  //in order to use in components this.$breakpoint.isMobile - is pointed to obkject in stroe for reactivity
+  inject('breakpoints', store.state.$breakpoints)
+
+  updateBreakpoint()
+
+  //============================================================
+  //
+  //============================================================
+  function createStore (store) {
+    store.registerModule('$breakpoints', {
+      namespaced: true,
+      state: $breakpoints,
+      mutations: {
+        'RESIZE': function (state, $breakpoints) {
+          // console.log(transition);
+          store.state['$breakpoints'] = $breakpoints
+        }
+      }
+    })
+  }
   //============================================================
   //
   //============================================================
@@ -164,12 +184,8 @@ export default async function ({req, store, isServer, isClient, app}, inject) {
   //============================================================
   function getCSSBreakpoint() {
     if(!isClient) throw new Error('Cannot read css breakpoint from server')
-
-    if(cssBreakpoint)
-      return cssBreakpoint
-    else
     // eslint-disable-next-line
-      cssBreakpoint =  window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
+    cssBreakpoint =  window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
     return cssBreakpoint
   }
 
@@ -221,5 +237,30 @@ export default async function ({req, store, isServer, isClient, app}, inject) {
       document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
       return true;
     }
+    //============================================================
+    //
+    //============================================================
+    function onResize () {
 
+      updateBreakpoint()
+    }
+
+    //============================================================
+    //
+    //============================================================
+    function updateBreakpoint () {
+      cookieBreakpoint = null
+      cookieBreakpoint = null
+      if(!cssBreakpoint && isClient) getCSSBreakpoint()
+      if(cssBreakpoint) setCookieItem('breakpoint',cssBreakpoint,Infinity,'/')
+      Vue.set($breakpoints,'isMobile',isMobile())
+      Vue.set($breakpoints,'isTablet',isTablet())
+      Vue.set($breakpoints,'isTouch',isTouch())
+      Vue.set($breakpoints,'isDesktop',isDesktop())
+      Vue.set($breakpoints,'isGteDesktop',!isTouch())
+      Vue.set($breakpoints,'isDesktopWS',isDesktopWideScreen())
+      Vue.set($breakpoints,'isDesktopHD',isDesktopHighDefinition())
+
+      store.commit('$breakpoints/RESIZE', $breakpoints)
+    }
 }
