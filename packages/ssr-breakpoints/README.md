@@ -61,11 +61,11 @@
           Touch < 1024px
         </div>
 
-        <div v-if="$breakpoint.isTablet">
+        <div v-if="$breakpoints.isTablet">
         	Tablet 769px from to  1023px
         </div>
 
-        <div v-if="$breakpoint.isMobile">
+        <div v-if="$breakpoints.isMobile">
         	Mobile < 768px
         </div>
 	</section>
